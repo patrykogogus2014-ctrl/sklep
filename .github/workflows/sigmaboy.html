@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sklep Serwera Minecraft</title>
+    <style>
+        :root { --main: #d400ff; --bg: #0a0a0a; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: white; text-align: center; padding: 40px; }
+        .shop-box { background: #151515; max-width: 500px; margin: auto; padding: 30px; border-radius: 20px; border: 1px solid #333; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .email-box { background: #000; padding: 15px; border-radius: 10px; border: 1px dashed var(--main); font-size: 20px; margin: 20px 0; color: #ff00ff; font-weight: bold; }
+        .price-list { text-align: left; margin: 20px 0; background: #222; padding: 15px; border-radius: 10px; }
+        .price-item { display: flex; justify-content: space-between; margin: 8px 0; border-bottom: 1px solid #333; padding-bottom: 5px; }
+        .instr { font-size: 14px; color: #aaa; line-height: 1.6; }
+        .btn-copy { background: var(--main); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="shop-box">
+        <h1>SKLEP SERWERA</h1>
+        <p>Wszystkie płatności (Google Pay / PayPal / Przelew) przyjmujemy na e-mail:</p>
+        
+        <div class="email-box" id="email">pykmcfake@gmail.com</div>
+        
+        <div class="price-list">
+            <div class="price-item"><span>Ranga VIP</span> <b>10 PLN</b></div>
+            <div class="price-item"><span>Ranga MVIP</span> <b>25 PLN</b></div>
+            <div class="price-item"><span>Ranga SVIP</span> <b>50 PLN</b></div>
+            <div class="price-item"><span>Ranga PYK</span> <b>100 PLN</b></div>
+        </div>
+
+        <div class="instr">
+            <b>INSTRUKCJA:</b><br>
+            1. Wyślij odpowiednią kwotę na powyższy e-mail.<br>
+            2. W tytule przelewu wpisz: <b>TWÓJ NICK Z GRY + NAZWA RANGI</b>.<br>
+            3. Po wysłaniu wpisz w grze komendę: <br>
+            <code style="color:var(--main)">/potwierdz [NICK] [RANGA]</code>
+        </div>
+        <br>
+        <button class="btn-copy" onclick="copyEmail()">KOPIUJ E-MAIL</button>
+    </div>
+
+    <script>
+        function copyEmail() {
+            navigator.clipboard.writeText("pykmcfake@gmail.com");
+            alert("E-mail skopiowany do schowka!");
+        }
+    </script>
+</body>
+</html>
